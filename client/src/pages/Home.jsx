@@ -2,6 +2,10 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, MapPin, Phone } from 'lucide-react';
 import { VENUE_LIST } from '../lib/venues';
 
+// Moves the whole poster+pizza-banner stack up/down together as one unit -
+// this is the only number to touch when repositioning it.
+const PROMO_STACK_OFFSET_PX = 110;
+
 export default function Home() {
   return (
     <div>
@@ -12,9 +16,12 @@ export default function Home() {
         }}
       >
         <div className="flex w-full flex-col gap-10 py-16 lg:flex-row lg:items-center">
-          <div className="mx-auto w-full max-w-[200px] shrink-0 px-4 sm:px-6 lg:mx-0 lg:pl-6 lg:pr-0">
+          <div
+            className="mx-auto w-full max-w-[200px] shrink-0 space-y-4 px-4 sm:px-6 lg:mx-0 lg:pl-6 lg:pr-0"
+            style={{ marginTop: PROMO_STACK_OFFSET_PX }}
+          >
             <img src="/photos/aktualna-akcia.jpg" alt="Aktuálna akcia" className="w-full rounded-xl border border-white/10 shadow-lg" />
-            <img src="/photos/pizza-rozvoz.jpg" alt="Rozvoz pizze - novinka" className="mt-24 w-full rounded-xl border border-white/10 shadow-lg" />
+            <img src="/photos/pizza-rozvoz.jpg" alt="Rozvoz pizze - novinka" className="w-full rounded-xl border border-white/10 shadow-lg" />
           </div>
 
           <div className="flex-1 px-4 text-center lg:text-left">
