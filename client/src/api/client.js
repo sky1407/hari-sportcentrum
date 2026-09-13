@@ -1,9 +1,5 @@
-// In production this points at the Fly.io API; locally it stays relative
-// and goes through the Vite dev server's /api proxy (see vite.config.js).
-const API_BASE = import.meta.env.VITE_API_URL || '/api';
-
 async function request(path, options = {}) {
-  const res = await fetch(`${API_BASE}${path}`, {
+  const res = await fetch(`/api${path}`, {
     headers: { 'Content-Type': 'application/json' },
     ...options,
   });

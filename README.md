@@ -1,7 +1,7 @@
 # Športcentrum HARI - moderný redizajn
 
 Redizajn webu [hari.sk](https://www.hari.sk) (Bánovce nad Bebravou) - reštaurácia, fitness, bowling, tenisová hala,
-tenisový kurt a badminton pod jednou strechou. Pôvodný web mal nefunkčný fotogalériu a žiadnu možnosť online
+tenisový kurt a badminton pod jednou strechou. Pôvodný web mal nefunkčnú fotogalériu a žiadnu možnosť online
 rezervácie, takže vznikol tento nový, responzívny redizajn s reálnym obsahom (adresa, hodiny, ceny) prevzatým
 z pôvodnej stránky.
 
@@ -17,23 +17,23 @@ z pôvodnej stránky.
 
 ## Technológie
 
-- **Klient:** React 19 + Vite + Tailwind CSS v4 + React Router + lucide-react
-- **Server:** Node.js + Express + SQLite (`better-sqlite3`)
+Jeden Vercel projekt (`client/`) obsahuje aj frontend aj backend:
+
+- **Frontend:** React 19 + Vite + Tailwind CSS v4 + React Router + lucide-react
+- **Backend:** Vercel serverless funkcie (`client/api/`), Node.js
+- **Databáza:** [Turso](https://turso.tech) (SQLite kompatibilná, cez `@libsql/client`)
 
 ## Lokálne spustenie
 
 ```bash
-# server
-cd server
-npm install
-cp .env.example .env
-npm run dev        # http://localhost:5001
-
-# klient (v druhom termináli)
 cd client
 npm install
-npm run dev         # http://localhost:5173, /api sa proxuje na server
+cp .env.local.example .env.local   # doplň TURSO_DATABASE_URL a TURSO_AUTH_TOKEN
+vercel dev                          # spustí frontend aj /api funkcie spolu, http://localhost:3000
 ```
+
+`vercel dev` je potrebné práve preto, že appka beží ako Vercel serverless funkcie (`client/api/*.js`) - samotné
+`npm run dev` (Vite) by spustilo len frontend bez backendu.
 
 ## Poznámka k emailu pri hlásení závad
 
