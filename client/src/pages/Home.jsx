@@ -32,7 +32,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 pt-10">
+      <section className="mx-auto max-w-6xl space-y-4 px-4 pt-10">
+        <img
+          src="/photos/aktualna-akcia.jpg"
+          alt="Aktuálna akcia"
+          className="w-full max-w-[280px] rounded-2xl border border-white/10"
+        />
         <div className="w-full max-w-[280px] overflow-hidden rounded-2xl border border-amber-500/20 bg-gradient-to-b from-amber-500/10 to-transparent">
           <img src="/photos/pizza-rozvoz.jpg" alt="Rozvoz pizze" className="h-36 w-full object-cover" />
           <div className="p-5">
