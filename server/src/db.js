@@ -1,9 +1,13 @@
 import Database from "better-sqlite3";
+import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const dbPath = path.join(__dirname, "..", "data", "hari.db");
+// DB_PATH points at the Fly.io volume mount (/data) in production;
+// locally it falls back to a file inside the repo.
+const dbPath = process.env.DB_PATH || path.join(__dirname, "..", "data", "hari.db");
+fs.mkdirSync(path.dirname(dbPath), { recursive: true });
 
 export const db = new Database(dbPath);
 db.pragma("journal_mode = WAL");
