@@ -32,25 +32,24 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 pt-12">
-        <div className="overflow-hidden rounded-2xl border border-amber-500/20 bg-gradient-to-br from-amber-500/10 to-transparent sm:flex">
-          <img src="/photos/pizza-rozvoz.jpg" alt="Rozvoz pizze" className="h-48 w-full object-cover sm:h-auto sm:w-2/5" />
-          <div className="flex-1 p-6 sm:p-8">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-500 px-3 py-1 text-xs font-black uppercase tracking-wider text-[#0b0f14]">
+      <section className="mx-auto max-w-6xl px-4 pt-10">
+        <div className="w-full max-w-[280px] overflow-hidden rounded-2xl border border-amber-500/20 bg-gradient-to-b from-amber-500/10 to-transparent">
+          <img src="/photos/pizza-rozvoz.jpg" alt="Rozvoz pizze" className="h-36 w-full object-cover" />
+          <div className="p-5">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-500 px-2.5 py-1 text-[11px] font-black uppercase tracking-wider text-[#0b0f14]">
               <Sparkles className="h-3.5 w-3.5" /> Novinka
             </span>
-            <h2 className="mt-3 text-2xl font-black text-white">Rozvoz pizze</h2>
-            <p className="mt-2 text-white/70">Originálnu pizzu z našej reštaurácie teraz doručíme aj k vám domov.</p>
-            <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/60">
-              <span className="flex items-center gap-1.5">
-                <Clock className="h-4 w-4 text-amber-500" /> Každý deň 14:30 – 20:00
-              </span>
-              <span className="flex items-center gap-1.5">
-                <CreditCard className="h-4 w-4 text-amber-500" /> Platba kartou možná
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Phone className="h-4 w-4 text-amber-500" /> 038 / 760 74 44
-              </span>
+            <h2 className="mt-3 text-lg font-black text-white">Rozvoz pizze</h2>
+            <div className="mt-3 space-y-1.5 text-sm text-white/60">
+              <p className="flex items-center gap-1.5">
+                <Clock className="h-4 w-4 shrink-0 text-amber-500" /> Každý deň 14:30 – 20:00
+              </p>
+              <p className="flex items-center gap-1.5">
+                <CreditCard className="h-4 w-4 shrink-0 text-amber-500" /> Platba kartou možná
+              </p>
+              <p className="flex items-center gap-1.5">
+                <Phone className="h-4 w-4 shrink-0 text-amber-500" /> 038 / 760 74 44
+              </p>
             </div>
           </div>
         </div>
