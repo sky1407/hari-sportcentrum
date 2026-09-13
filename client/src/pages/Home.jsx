@@ -1,60 +1,40 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, MapPin, Phone, Sparkles, Clock, CreditCard } from 'lucide-react';
+import { ArrowRight, MapPin, Phone } from 'lucide-react';
 import { VENUE_LIST } from '../lib/venues';
 
 export default function Home() {
   return (
     <div>
       <section
-        className="relative flex min-h-[70vh] items-center bg-cover bg-center"
+        className="relative bg-cover bg-center"
         style={{
           backgroundImage: 'linear-gradient(180deg, rgba(11,15,20,0.55), rgba(11,15,20,0.97)), url(/photos/hari-komplex.png)',
         }}
       >
-        <div className="mx-auto w-full max-w-6xl px-4 py-20 text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.3em] text-amber-500">Bánovce nad Bebravou</p>
-          <h1 className="mt-4 text-4xl font-black leading-tight text-white sm:text-6xl">
-            Šport, zábava a dobré jedlo
-            <br className="hidden sm:block" />
-            pod jednou strechou
-          </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-white/70">
-            Fitness, bowling, tenis, badminton aj reštaurácia s pizzou - rezervujte si termín online, alebo príďte osobne.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-white/60">
-            <span className="flex items-center gap-1.5">
-              <MapPin className="h-4 w-4 text-amber-500" /> Svätoplukova 1548, Bánovce nad Bebravou
-            </span>
-            <span className="flex items-center gap-1.5">
-              <Phone className="h-4 w-4 text-amber-500" /> 038 / 760 74 44
-            </span>
+        <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-16 lg:flex-row lg:items-center">
+          <div className="mx-auto w-full max-w-[200px] shrink-0 space-y-3 lg:mx-0">
+            <img src="/photos/aktualna-akcia.jpg" alt="Aktuálna akcia" className="w-full rounded-xl border border-white/10 shadow-lg" />
+            <img src="/photos/pizza-rozvoz.jpg" alt="Rozvoz pizze - novinka" className="w-full rounded-xl border border-white/10 shadow-lg" />
           </div>
-        </div>
-      </section>
 
-      <section className="mx-auto max-w-6xl space-y-4 px-4 pt-10">
-        <img
-          src="/photos/aktualna-akcia.jpg"
-          alt="Aktuálna akcia"
-          className="w-full max-w-[280px] rounded-2xl border border-white/10"
-        />
-        <div className="w-full max-w-[280px] overflow-hidden rounded-2xl border border-amber-500/20 bg-gradient-to-b from-amber-500/10 to-transparent">
-          <img src="/photos/pizza-rozvoz.jpg" alt="Rozvoz pizze" className="h-36 w-full object-cover" />
-          <div className="p-5">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-500 px-2.5 py-1 text-[11px] font-black uppercase tracking-wider text-[#0b0f14]">
-              <Sparkles className="h-3.5 w-3.5" /> Novinka
-            </span>
-            <h2 className="mt-3 text-lg font-black text-white">Rozvoz pizze</h2>
-            <div className="mt-3 space-y-1.5 text-sm text-white/60">
-              <p className="flex items-center gap-1.5">
-                <Clock className="h-4 w-4 shrink-0 text-amber-500" /> Každý deň 14:30 – 20:00
-              </p>
-              <p className="flex items-center gap-1.5">
-                <CreditCard className="h-4 w-4 shrink-0 text-amber-500" /> Platba kartou možná
-              </p>
-              <p className="flex items-center gap-1.5">
-                <Phone className="h-4 w-4 shrink-0 text-amber-500" /> 038 / 760 74 44
-              </p>
+          <div className="flex-1 text-center lg:text-left">
+            <p className="text-sm font-bold uppercase tracking-[0.3em] text-amber-500">Bánovce nad Bebravou</p>
+            <h1 className="mt-4 text-4xl font-black leading-tight text-white sm:text-6xl">
+              Šport, zábava a dobré jedlo
+              <br className="hidden sm:block" />
+              pod jednou strechou
+            </h1>
+            <p className="mx-auto mt-5 max-w-2xl text-white/70 lg:mx-0">
+              Fitness, bowling, tenis, badminton aj reštaurácia s pizzou - rezervujte si termín online, alebo príďte
+              osobne.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-white/60 lg:justify-start">
+              <span className="flex items-center gap-1.5">
+                <MapPin className="h-4 w-4 text-amber-500" /> Svätoplukova 1548, Bánovce nad Bebravou
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Phone className="h-4 w-4 text-amber-500" /> 038 / 760 74 44
+              </span>
             </div>
           </div>
         </div>
