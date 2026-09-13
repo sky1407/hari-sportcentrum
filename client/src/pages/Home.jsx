@@ -11,13 +11,13 @@ export default function Home() {
           backgroundImage: 'linear-gradient(180deg, rgba(11,15,20,0.55), rgba(11,15,20,0.97)), url(/photos/hari-komplex.png)',
         }}
       >
-        <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-16 lg:flex-row lg:items-center">
-          <div className="mx-auto w-full max-w-[200px] shrink-0 space-y-3 lg:mx-0">
+        <div className="flex flex-col gap-10 py-16 lg:flex-row lg:items-center">
+          <div className="mx-auto w-full max-w-[200px] shrink-0 space-y-3 px-4 sm:px-6 lg:mx-0 lg:pl-6 lg:pr-0">
             <img src="/photos/aktualna-akcia.jpg" alt="Aktuálna akcia" className="w-full rounded-xl border border-white/10 shadow-lg" />
             <img src="/photos/pizza-rozvoz.jpg" alt="Rozvoz pizze - novinka" className="w-full rounded-xl border border-white/10 shadow-lg" />
           </div>
 
-          <div className="flex-1 text-center lg:text-left">
+          <div className="flex-1 px-4 text-center lg:text-left">
             <p className="text-sm font-bold uppercase tracking-[0.3em] text-amber-500">Bánovce nad Bebravou</p>
             <h1 className="mt-4 text-4xl font-black leading-tight text-white sm:text-6xl">
               Šport, zábava a dobré jedlo
