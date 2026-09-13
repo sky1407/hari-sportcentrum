@@ -14,7 +14,7 @@ export default function Home() {
         <div className="flex w-full flex-col gap-10 py-16 lg:flex-row lg:items-center">
           <div className="mx-auto w-full max-w-[200px] shrink-0 px-4 sm:px-6 lg:mx-0 lg:pl-6 lg:pr-0">
             <img src="/photos/aktualna-akcia.jpg" alt="Aktuálna akcia" className="w-full rounded-xl border border-white/10 shadow-lg" />
-            <img src="/photos/pizza-rozvoz.jpg" alt="Rozvoz pizze - novinka" className="mt-8 w-full rounded-xl border border-white/10 shadow-lg" />
+            <img src="/photos/pizza-rozvoz.jpg" alt="Rozvoz pizze - novinka" className="mt-24 w-full rounded-xl border border-white/10 shadow-lg" />
           </div>
 
           <div className="flex-1 px-4 text-center lg:text-left">
