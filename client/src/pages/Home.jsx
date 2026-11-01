@@ -1,14 +1,42 @@
+import { Head } from 'vite-react-ssg';
 import { Link } from 'react-router-dom';
 import { ArrowRight, MapPin, Phone } from 'lucide-react';
 import { VENUE_LIST } from '../lib/venues';
+import Seo from '../components/Seo';
+import { SITE_URL, SITE_NAME } from '../lib/seo';
 
 // Moves the whole poster+pizza-banner stack up/down together as one unit -
 // this is the only number to touch when repositioning it.
 const PROMO_STACK_OFFSET_PX = 110;
 
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'SportsActivityLocation',
+  name: SITE_NAME,
+  url: SITE_URL,
+  image: `${SITE_URL}/photos/hari-komplex.png`,
+  telephone: '+421387607444',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Svätoplukova 1548',
+    addressLocality: 'Bánovce nad Bebravou',
+    postalCode: '957 04',
+    addressCountry: 'SK',
+  },
+};
+
 export default function Home() {
   return (
     <div>
+      <Seo
+        title="Športcentrum HARI | Bánovce nad Bebravou"
+        description="Reštaurácia, fitness, bowling, tenisová hala, tenisový kurt a badminton v Bánovciach nad Bebravou. Rezervujte si termín online."
+        path="/"
+      />
+      <Head>
+        <script type="application/ld+json">{JSON.stringify(LOCAL_BUSINESS_SCHEMA)}</script>
+      </Head>
+
       <section
         className="relative flex min-h-[70vh] items-center bg-cover bg-center"
         style={{

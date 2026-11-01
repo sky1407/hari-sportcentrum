@@ -4,6 +4,7 @@ import { VENUES } from '../lib/venues';
 import PhotoGallery from '../components/PhotoGallery';
 import ReservationForm from '../components/ReservationForm';
 import DefectReportSection from '../components/DefectReportSection';
+import Seo from '../components/Seo';
 
 export default function VenuePage() {
   const { slug } = useParams();
@@ -13,6 +14,12 @@ export default function VenuePage() {
 
   return (
     <div>
+      <Seo
+        title={`${venue.label} | Športcentrum HARI`}
+        description={venue.description}
+        path={`/${venue.slug}`}
+        image={venue.heroImage}
+      />
       <div
         className="relative flex h-64 items-end bg-cover bg-center sm:h-80"
         style={{ backgroundImage: `linear-gradient(180deg, rgba(11,15,20,0.3), rgba(11,15,20,0.95)), url(${venue.heroImage})` }}

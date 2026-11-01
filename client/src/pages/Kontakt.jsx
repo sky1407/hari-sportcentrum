@@ -1,10 +1,16 @@
 import { MapPin, Phone, Mail, User } from 'lucide-react';
+import Seo from '../components/Seo';
 
 const MAPS_HREF = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('Svätoplukova 1548, 957 04 Bánovce nad Bebravou')}`;
 
 export default function Kontakt() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-16">
+      <Seo
+        title="Kontakt | Športcentrum HARI"
+        description="Kontaktné údaje, adresa a otváracie hodiny športcentra HARI v Bánovciach nad Bebravou."
+        path="/kontakt"
+      />
       <h1 className="text-3xl font-black text-white sm:text-4xl">Kontakt</h1>
       <p className="mt-2 text-white/60">Radi vás privítame v našom športcentre.</p>
 
